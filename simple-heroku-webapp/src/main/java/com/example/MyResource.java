@@ -34,5 +34,4 @@ public class MyResource {
         return  Response.status(200).entity(helloObj).build();
     }
 
-
 }
