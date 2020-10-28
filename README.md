@@ -1,1 +1,1 @@
-# ci-kedivim-2-javaWebApp
+# Demo Java Restfull Web App for CI purposes
