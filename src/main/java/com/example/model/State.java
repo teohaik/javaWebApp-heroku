@@ -11,6 +11,11 @@ public class State {
         this.name = name;
     }
 
+    public State() {
+        code = "";
+        name = "";
+    }
+
     public String getCode() {
         return code;
     }

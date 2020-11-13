@@ -3,6 +3,8 @@ package com.example;
 import static org.junit.Assert.assertEquals;
 
 import javax.ws.rs.core.Application;
+
+import com.example.resources.Calculator;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
