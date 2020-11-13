@@ -32,7 +32,7 @@ public class States {
     public Response getState(@PathParam("code") String code) {
         State result = new State();
         Optional<State> optState = StatesDB.states
-                .stream().filter(s -> s.getCode().equals(code))
+                .stream().filter(s -> s.getCode().equalsIgnoreCase(code))
                 .findFirst();
         if(optState.isPresent()){
             result = optState.get();
