@@ -1,5 +1,2 @@
-# Demo Java Restfull Web App for CI purposes
+# Demo Java Restful Web App for Educational purposes. 
 
-1. 
-2.
-3.
