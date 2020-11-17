@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -24,6 +25,15 @@ public class Calculator {
     @Produces(MediaType.APPLICATION_JSON)
     public Response adder(@PathParam("a") String a, @PathParam("b") String b) {
         int result = Integer.valueOf(a) + Integer.valueOf(b);
+        return Response.status(200).entity(result).build();
+    }
+
+    @GET
+    @Path("pension")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response calculatePension(@QueryParam("months") String months,
+            @QueryParam("lastSalary") String lastSalary) {
+        Long result = Long.valueOf(months) * Long.valueOf(lastSalary) * 125;
         return Response.status(200).entity(result).build();
     }
 
