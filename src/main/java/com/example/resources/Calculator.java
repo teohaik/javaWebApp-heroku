@@ -1,5 +1,6 @@
 package com.example.resources;
 
+import java.math.BigInteger;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -24,7 +25,9 @@ public class Calculator {
     @Path("add/{a}/{b}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response adder(@PathParam("a") String a, @PathParam("b") String b) {
-        int result = Integer.valueOf(a) + Integer.valueOf(b);
+        BigInteger bi1 = new BigInteger(a);
+        BigInteger bi2 = new BigInteger(b);
+        BigInteger result = bi1.add(bi2);
         return Response.status(200).entity(result).build();
     }
 
