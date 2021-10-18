@@ -12,8 +12,8 @@ public class State {
     }
 
     public State() {
-        code = "";
-        name = "";
+        code = "N/A";
+        name = "N/A";
     }
 
     public String getCode() {
